@@ -30,7 +30,7 @@ export const SendMessage = async (req, res) => {
             if(error.errors.message){
                 errorMessage += error.errors.message.message + " "
             }
-            return res.status(200).json({
+            return res.status(400).json({
                 success: false,
                 message: errorMessage
             })
